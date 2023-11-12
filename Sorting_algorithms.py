@@ -1,5 +1,5 @@
 import numpy as np
-import datetime
+import time
 
 
 def merge_sort(array):
@@ -57,13 +57,13 @@ if __name__ == "__main__":
     unsorted_array = [i for i in np.random.randint(0, 1000, 10000)]
     print('Before sorting -', unsorted_array)
 
-    start = datetime.datetime.now()
+    start = time.time()
     sorted_array = merge_sort(unsorted_array)
-    stop = datetime.datetime.now()
-    print('Time taken for merge sorting execution', time_it(start, stop))
+    stop = time.time()
+    print('Time taken for merge sorting execution', time_it(start, stop), ' Seconds')
 
-    # start = datetime.datetime.now()
+    # start = time.time()
     # sorted_array = binary_sort(unsorted_array)
-    # stop = datetime.datetime.now()
-    # print('Time taken for binary sorting execution', time_it(start, stop))
+    # stop = time.time()
+    # print('Time taken for binary sorting execution', time_it(start, stop), ' Seconds')
     print('After sorting -', sorted_array)
